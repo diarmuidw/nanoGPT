@@ -23,19 +23,18 @@ The first task is to tokenise the text. As each file is less that 1MB , there ar
 python data/peig/prepare.py 
 ```
 
-Next train. I've used pretty simple variables here and not deep training to keep the time taken to be under an hour.  The drouput variable made a significant difference. 
+Next train. I've used pretty straightforward variable values here and not deep training to keep the time taken to be under an hour.  The droupout variable at 20% made a significant difference. 
 
 ```
 python train.py config/train_peig.py --device=cuda --compile=False --eval_iters=20 --log_interval=1 --block_size=64 --batch_size=12 --n_layer=4 --n_head=4 --n_embd=128 --max_iters=1000 --lr_decay_iters=1000 --dropout=0.2
 ```
 
-Next sample using a start string. The system will carry on generating charater by charater to create some gorm of Peig like prose! Not bad for a model based purely on one text.  I like "TThe wind that was not right that hurry on again than us is around them"
+Next sample using a seed phrase. The system will carry on generating charater by charater to create some form of Peig-like prose! Not bad for a model based purely on one text.  I like "The wind that was not right that hurry on again than us is around them". I think if you said a few of these to a random Irish person they would say it could be Peig. I use a loop on a range of temperatures to generate with more or less variability. 
 
 ```
 python sample.py --out_dir=out-peig  --start="The wind"
 ```
 
-The file uses a range of temperatures to generate with more or less variability.
 ```
 temp: 0.5
 The wind that was drowned for the boat that was swallowed to the night. 'The night who'd be telling the night before the night that night \vith her. The poor girl was there before him. She had no wonder, but she didn't know
