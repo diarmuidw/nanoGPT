@@ -4,7 +4,7 @@
 
 This is a fork of the [nanoGPT](https://github.com/karpathy/nanoGPT), the simple but quick generative text repo. Thanks to Andrej for his super work and generosity.
 
-I've included the text of [Peig]https://archive.org/stream/anoldwomansrefle00sayemiss/anoldwomansrefle00sayemiss.txt (technically "An old womans reflections") in english. It's a book much loved/hated by generations of Irish school kids as we studied it in the Irish Language. 
+I've included the text of [Peig](https://archive.org/stream/anoldwomansrefle00sayemiss/anoldwomansrefle00sayemiss.txt) (technically "An old womans reflections") in english. It's a book much loved/hated by generations of Irish school kids as we studied it in the Irish Language. 
 
 Here's an example of the generated output 
 ```
