@@ -11,7 +11,7 @@ Here's an example of the generated output
 The wind is the canoes of the sea us with Yellow Island. And may God grant us his soul! When I came to the eternal rest! When the Island to their souls! The one who are gone to the mackerel about Dingle
 ```
 
-I've also incuded the text of Nimah by Peter O'leary as gaelge to see how the gerative text would handle the change of language, alphabet and grammar. 
+I've also incuded the text of Nimah by Peter O'leary as gaeilge to see how the gerative text would handle the change of language, alphabet and grammar. 
 
 [Niamh](https://www.gutenberg.org/ebooks/50913)
 
