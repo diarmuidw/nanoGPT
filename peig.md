@@ -6,7 +6,7 @@ This is a fork of the [nanoGPT](https://github.com/karpathy/nanoGPT), the simple
 
 I've included the text of Peig (technically "An old womans reflections") in english. 
 
-Here's an example of the outoput 
+Here's an example of the generated output 
 ```
 The wind is the canoes of the sea us with Yellow Island. And may God grant us his soul! When I came to the eternal rest! When the Island to their souls! The one who are gone to the mackerel about Dingle
 ```
