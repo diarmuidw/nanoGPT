@@ -17,19 +17,19 @@ I've also incuded the text of Nimah by Peter O'leary as gaelge to see how the ge
 
 To run this you will need a GPU enabled workspace. I've used [Paperspace](http://www.paperspace.com) .
 
-The first task is to tokenise the text. As each file is less that 1MB , there are limited tokens so this tokenises per character. This will mean that the generative text will be less accurate but for an experiment, it's still interesting.
+The first task is to tokenise the text. This uses the [BPE](https://github.com/openai/tiktoken) tokeniser but with limited text, the ratio of unique tokens to training tokens is small. This suggests that the generative text will be less accurate but for an experiment, it is still interesting.
 
 ```
 python data/peig/prepare.py 
 ```
 
-Next train. I've used pretty straightforward variable values here and not deep training to keep the time taken to be under an hour.  The droupout variable at 20% made a significant difference. 
+Next train. I've used pretty straightforward variable values here and not deep training to keep the time taken to be under an hour.  The dropout variable at 20% made a significant difference. 
 
 ```
 python train.py config/train_peig.py --device=cuda --compile=False --eval_iters=20 --log_interval=1 --block_size=64 --batch_size=12 --n_layer=4 --n_head=4 --n_embd=128 --max_iters=1000 --lr_decay_iters=1000 --dropout=0.2
 ```
 
-Next sample using a seed phrase. The system will carry on generating charater by charater to create some form of Peig-like prose! Not bad for a model based purely on one text.  I like "The wind that was not right that hurry on again than us is around them". I think if you said a few of these to a random Irish person they would say it could be Peig. I use a loop on a range of temperatures to generate with more or less variability. 
+Next sample using a seed or start phrase. The system will carry on generating charater by charater to create some form of Peig-like prose! Not bad for a model based purely on one text.  I like "The wind that was not right that hurry on again than us is around them". I think if you said a few of these to a random Irish person they would say it could be Peig. I use a loop on a range of temperatures to generate with more or less variability. 
 
 ```
 python sample.py --out_dir=out-peig  --start="The wind"
@@ -64,7 +64,7 @@ temp: 1.5
 The wind was looking their life looking by me on life. He spent that and land shining down on water. More and head came to a chair we'd ever packing into us lands.' 'Do for one,' said Kate, 'as all near a an elderly
 ```
 
-The output of the Niamh book is as follows
+The output of the Niamh book is as follows. I'm in no position to guage its accuracy!
 
 ```
 python sample.py --out_dir=out-niamh --start="Tá mé"  #Tá mé means I am
