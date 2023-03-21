@@ -2,7 +2,7 @@
 
 # PeigGPT
 
-This is a fork of the nanoGPT, simple but quick generative text repo.
+This is a fork of the [nanoGPT](https://github.com/karpathy/nanoGPT), the simple but quick generative text repo. Thanks to Andrej for his super work and generosity.
 
 I've included the text of Peig (technically "An old womans reflections") in english. 
 
@@ -13,7 +13,7 @@ The wind is the canoes of the sea us with Yellow Island. And may God grant us hi
 
 I've also incuded the text of Nimah by Peter O'leary as gaelge to see how the gerative text would handle the change of language, alphabet and grammar. 
 
-[Nimah] {https://www.gutenberg.org/ebooks/50913}
+[Niamh](https://www.gutenberg.org/ebooks/50913)
 
 To run this you will need a GPU enabled workspace. I've used [Paperspace](http://www.paperspace.com) .
 
